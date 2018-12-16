@@ -1,0 +1,38 @@
+.fixedBackground {
+  background-image: url("images/background.jpg");
+  min-height: 1000px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* For colunms */
+.column1 {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width:600px) {
+    .column1 {
+        width: 100%;
+    }
+}
+
+.greyBox{
+  background: #D0D3D4 ;
+  padding: 20px;
+  width: 280px;
+  height: 150px;
+}
+
+/* For indentation */
+.indent1{
+  text-indent: 25%;
+}

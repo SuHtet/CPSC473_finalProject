@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<title>ABC Restaurant</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="Tabs.css">
+<head>
+  <script src="js/Tabs.js"></script>
+</head>
+<body>
+
+<div class="w3-container">
+  <h2><center><font size = "10" face="Algerian" color="red"><strong>ABC Restaurant</strong></font></center></h2>
+</div>
+
+<!-- Tabs to navigate to different pages -->
+<div class="w3-bar w3-red">
+  <button class="w3-bar-item w3-button" onclick="openCity('Home')">Home</button>
+  <button class="w3-bar-item w3-button" onclick="openCity('About Us')">About Us</button>
+  <button class="w3-bar-item w3-button" onclick="openCity('Menu')">Menu</button>
+  <button class="w3-bar-item w3-button" onclick="openCity('Contact')">Contact</button>
+</div>
+
+<div class="fixedBackground">
+
+<!-- Home page -->
+<div id="Home" class="w3-container city" style="display:none">
+
+    <h2><center><font size = "6" face="Algerian" color="blue"><strong>Welcome to ABC Restaurant</strong></font></center></h2><br>
+    <font size ="5" color ="white"><b>ABC's most popular dishes</b></font>
+    <br></br>
+
+    <!-- popular items with pics and description -->
+    <div class="row">
+    <div class="column1">
+        <img src="images/chocolateWaffel.jpg">
+    </div>
+    <div class="column1">
+      <h3><font size="4" color="white"><b>Chocolate Banana Waffel</b></h3>
+      <p><b>Salty Caramel, Oregon Hazelnuts, Whipping Cream</b></p>
+    </div>
+    </div>
+
+    <br></br>
+    <div class="row">
+    <div class="column1">
+      <h3><font size="4" color="white"><b>Organic Chicken Salad</b></h3>
+      <p><b>Napa Cabbage, Mixed Greens, Bell Peppers, Snow Peas,  Cilantro, Sesame Wontons & Asian Vinaigrette</b></p>
+    </div>
+    <div class="column1">
+      <img src="images/salad.jpg">
+    </div>
+    </div>
+
+    <br></br>
+    <div class="row">
+    <div class="column1">
+      <img src="images/steak.jpg">
+    </div>
+    <div class="column1">
+      <h3><font size="4" color="white"><b>Flat Iron Steak</b></h3>
+      <p><b>Plums Dry Rubbed Prime Flat Iron Steak</b></p>
+    </div>
+    </div>
+
+    <br></br>
+    <div class="row">
+    <div class="column1">
+      <h3><font size="4" color="white"><b>Coconut French Toast</b></h3>
+      <p><b>Strawberries, Papaya & Banana, Orange Butter & Maple Syrup</b></p>
+    </div>
+    <div class="column1">
+      <img src="images/coconutFrenchToast.jpg">
+    </div>
+    </div>
+</div>
+<!-- end of Home page -->
+
+<!-- About us page -->
+<div id="About Us" class="w3-container city" style="display:none">
+  <h2><center><font size = "8" face="Algerian" color="blue"><strong>About Us</strong></font></center></h2>
+  <p><span><font size=5 color="red">Best Deal!Every Meal!</font></span></p>
+<p><font size=4 color="white">We love restaurants as much as you do. That’s why we’ve been helping them fill tables since 1999.
+   Whether you’re browsing for a quick bite or planning a big night, Restaurant.com will help you discover the perfect dining experience.
+    Your new favorite restaurant is out there – go ahead, dig in!</font></p>
+<br>
+<font size=4 color="white"><b>ABC's menu categories</b><font>
+<ul>
+<li>
+<h4><strong><u>Breakfast Specialities</u></strong></h4>
+</li>
+<li>
+<h4><strong><u>Salads</u></strong></h4>
+</li>
+<li>
+<h4><strong><u>Lunch Specialities</u></strong></h4>
+</li>
+</ul>
+</div>
+<!-- end of About Us page -->
+
+<!-- Menu page -->
+<div id="Menu" class="w3-container city" style="display:none">
+
+<!-- for breakfast specialities -->
+  <h2><center><font size = "5"  color="blue"><strong><u>Breakfast Specialities</u></strong></font></center></h2>
+
+  <h4><strong><font color="white">Chocolate Banana Waffel</strong></h4>
+  <span><font color="purple"><b>$ 10.00</b></font></span>
+  <h4>Quantity:
+    <button type="button" name="Chocolate Banana Waffel_quantity-" id = "Chocolate Banana Waffel_quantity-" onclick = "(cal_total(-10))">-</button>
+    <button type="button" name="Chocolate Banana Waffel_quantity+" id = "Chocolate Banana Waffel_quantity+" onclick = "(cal_total(+10))">+</button><br><h3>
+
+  <h4><strong>Coconut French Toast</strong></h4>
+  <span><font color="purple"><b>$ 10.00</b></font></span>
+  <h4>Quantity:
+    <button type="button" name="Coconut French Toast_quantity-" id = "Coconut French Toast_quantity-" onclick = "(cal_total(-10))">-</button>
+    <button type="button" name="Coconut French Toast_quantity+" id = "Coconut French Toast_quantity+" onclick = "(cal_total(+10))">+</button><br><h3>
+
+  <h4><strong>Steak with a Garlic and Parsley Risotto</strong></h4>
+  <span><font color="purple"><b>$ 15.00</b></font></span>
+  <h4>Quantity:
+    <button type="button" name="Risotto_quantity-" id = "Risotto_quantity-" onclick = "(cal_total(-15))">-</button>
+    <button type="button" name="Risotto_quantity+" id = "Risotto_quantity+" onclick = "(cal_total(+15))">+</button><br><h3>
+
+  <h4><strong>Honey-Garlic Glazed Meatballs</strong></h4>
+  <span><font color="purple"><b>$ 15.00</b></font></span>
+  <h4>Quantity:
+    <button type="button" name="Meatballs_quantity-" id = "Meatballs_quantity-" onclick = "(cal_total(-15))">-</button>
+    <button type="button" name="Meatballs_quantity+" id = "Meatballs_quantity+" onclick = "(cal_total(+15))">+</button><br><h3>
+
+  <h4><strong>Honey-Garlic Glazed Meatballs</strong></h4>
+  <span><font color="purple"><b>$ 15.00</b></font></span>
+  <h4>Quantity:
+    <button type="button" name="Avocado_Salsa_quantity-" id = "Avocado_Salsa_quantity-" onclick = "(cal_total(-15))">-</button>
+    <button type="button" name="Avocado_Salsa_quantity+" id = "Avocado_Salsa_quantity+" onclick = "(cal_total(+15))">+</button><br><h3>
+
+<!-- for salads -->
+  <h2><center><font size = "5"  color="blue"><strong><u>Salads</u></strong></font></center></h2>
+
+  <h4><strong>Organic Chicken Salad</strong></h4>
+  <span><font color="purple"><b>$ 25.00</b></font></span>
+  <h4>Quantity:
+    <button type="button" name="Organic Chicken Salad_quantity-" id = "Organic Chicken Salad_quantity-" onclick = "(cal_total(-25))">-</button>
+    <button type="button" name="Organic Chicken Salad_quantity+" id = "Organic Chicken Salad_quantity+" onclick = "(cal_total(+25))">+</button><br><h3>
+
+  <h4><strong>Caesar Salad</strong></h4>
+  <span><font color="purple"><b>$ 17.00</b></font></span>
+  <h4>Quantity:
+    <button type="button" name="Caesar_Salad_quantity-" id = "Caesar_Salad_quantity-" onclick = "(cal_total(-17))">-</button>
+    <button type="button" name="Caesar_Salad_quantity+" id = "Caesar_Salad_quantity+" onclick = "(cal_total(+17))">+</button><br><h3>
+
+  <h4><strong>Wild Salmon And Spanich Salad</strong></h4>
+  <span><font color="purple"><b>$ 10.00</b></font></span>
+  <h4>Quantity:
+    <button type="button" name="Wild Salmon_quantity-" id = "Wild Salmon_quantity-" onclick = "(cal_total(-10))">-</button>
+    <button type="button" name="Wild Salmon_quantity+" id = "Wild Salmon_quantity+" onclick = "(cal_total(+10))">+</button><br><h3>
+
+  <h4><strong>Slow Oven Roasted Turkey Salad</strong></h4>
+  <span><font color="purple"><b>$ 25.00</b></font></span>
+  <h4>Quantity:
+    <button type="button" name="Turkey_quantity-" id = "Turkey_quantity-" onclick = "(cal_total(-25))">-</button>
+    <button type="button" name="Turkey_quantity+" id = "Turkey_quantity+" onclick = "(cal_total(+25))">+</button><br><h3>
+
+<!-- for lunch specialities -->
+<h2><center><font size = "5"  color="blue"><strong><u>Lunch Specialities</u></strong></font></center></h2>
+
+<h4><strong>Flat Iron Steak</strong></h4>
+<span><font color="purple"><b>$ 15.00</b></font></span>
+<h4>Quantity:
+  <button type="button" name="Steak_quantity-" id = "Steak_quantity-" onclick = "(cal_total(-15))">-</button>
+  <button type="button" name="Steak_quantity+" id = "Steak_quantity+" onclick = "(cal_total(+15))">+</button><br><h3>
+
+<h4><strong>BBQ Meatloaf and Egg</strong></h4>
+<span><font color="purple"><b>$ 17.00</b></font></span>
+<h4>Quantity:
+  <button type="button" name="BBQ_quantity-" id = "BBQ_quantity-" onclick = "(cal_total(-17))">-</button>
+  <button type="button" name="BBQ_quantity+" id = "BBQ_quantity+" onclick = "(cal_total(+17))">+</button><br><h3>
+
+<h4><strong>Hangover Burger</strong></h4>
+<span><font color="purple"><b>$ 15.00</b></font></span>
+<h4>Quantity:
+  <button type="button" name="Hangover_quantity-" id = "Hangover_quantity-" onclick = "(cal_total(-15))">-</button>
+  <button type="button" name="Hangover_quantity+" id = "Hangover_quantity+" onclick = "(cal_total(+15))">+</button><br><h3>
+
+<h4><strong>Cheese Burger</strong></h4>
+<span><font color="purple"><b>$ 15.00</b></font></span>
+<h4>Quantity:
+  <button type="button" name="Cheese_quantity-" id = "Cheese_quantity-" onclick = "(cal_total(-15))">-</button>
+  <button type="button" name="Cheese_quantity+" id = "Cheese_quantity+" onclick = "(cal_total(+15))">+</button><br><h3>
+
+<!-- To show the 'Total' textbox -->
+  <label>
+  <br> <font color="black"><b>Total</b></font>
+  <input value="0.00"  type="text" id="total" />
+  </label>
+
+<!-- link to the calculator -->
+  <p><a href="C:\Users\su\Downloads\CPSC473_finalProject\CPSC473_finalProject\bill_splitter.html"><font size = 5 color = "navy"><u>Calculate Tips and Split Bill</u></font></a></p>
+</div>
+<!-- end of menu page -->
+
+<!-- Contact Page -->
+<div id="Contact" class="w3-container city" style="display:none">
+  <h3><font color ="blue"><center><u>CONTACT <span>INFO</span></u></center></font></h3>
+  <ul>
+  <li>
+  <h4><strong><u>Phone</u></strong></h4>
+  <p>(123)456-7890 </p>
+  </li>
+  <li>
+  <h4><strong><u>Address</u></strong></h4>
+  <p>123 Main St Costa Mesa CA-92627</p>
+  </li>
+  <li>
+  <h4><strong><u>E-mail</u></strong></h4>
+  <p>abcrestaurant@gmail.com</p>
+  </li>
+</ul>
+</div>
+</div>
+<!-- end of contact page -->
+
+</body>
+</html>
